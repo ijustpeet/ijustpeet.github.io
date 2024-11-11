@@ -1,0 +1,324 @@
+/* Reset some default margins */
+body, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*background-color: #003366; Dark background */
+}
+
+/* Style the navigation bar */
+.navbar {
+    background-color: #FFE285; /* Dark background */
+    padding: 30px 20px;
+    position: fixed; /* Sticks the navbar to the top */
+    top: 0;
+    width: 99%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+/* Style the brand name (title) */
+.navbar-brand a {
+    color: #000000; /* Text color */;
+    text-decoration: none;
+    font-family: Georgia, serif;
+    font-size: 1.5rem;
+}
+
+/* Style the menu */
+.navbar-menu {
+    list-style: none;
+    color: #000000; /* Text color */;
+    display: flex;
+    gap: 20px;
+    max-width: 80%; /* Prevents overflow by capping width */
+    overflow: hidden;
+    flex-wrap: wrap; 
+    font-family: Georgia, serif;
+    font-size: 2.5rem;
+}
+
+/* Style the menu links */
+.navbar-menu li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 8px 16px;
+    font-size: 18px;
+}
+
+/* Add hover effect */
+.navbar-menu li a:hover {
+    background-color: #4a5e42;
+    border-radius: 5px;
+}
+
+/* Style for page content */
+.content {
+    margin-top: 100px; /* Add margin to avoid overlap with fixed navbar */
+    padding: 20px;
+    font-size: 1.5rem;
+}
+
+/* Styling for the intro box */
+.intro-box {
+    width: 70%; /* Set width of the box */
+    margin: 0 auto; /* Horizontally center the box */
+    padding: 25px; /* Add some padding inside the box */
+    background-color: #f4f4f4; /* Background color for the box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    text-align: center; /* Center-align the text inside the box */
+    margin-top: 200px;
+}
+
+/* Optional: You can style the heading and paragraph inside the box */
+.intro-box h1 {
+    font-size: 1.9em;
+    margin-bottom: 19px;
+}
+
+.intro-box p {
+    font-size: 1.5em;
+    line-height: 1.7;
+}
+
+.intro-box p1 {
+    font-size: 1.7em;
+    line-height: 1.7;
+}
+
+/* Styling for the services container */
+/*### style for service page!!!*/ 
+/*### style for service page!!!*/ 
+
+
+/* Add hover effect */
+.navbar-menu li a:hover {
+    background-color: #82a972;
+    border-radius: 5px;
+}
+
+/* Style for page content */
+.content {
+    margin-top: 110px; /* Add margin to avoid overlap with fixed navbar */
+    padding: 20px;
+    font-size: 1.5rem;
+}
+
+/* Styling for the services container */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Spread the boxes evenly */
+    align-items: flex-start;
+    margin-top: 175px;
+    gap: 30px;   
+}
+
+/* Base styles for all boxes */
+.services .intro-box,
+.services .JS-box,
+.services .SQL-box {
+    width: 48%; /* Adjust width to fit 3 boxes side by side */
+    background-color: #1E352F;
+    color: #FFE285;
+    border-radius: 10px;
+    margin-top: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    height: 300px; /* Adjusted height */
+    overflow: hidden; 
+    margin-bottom: 30px; /* Adjust the value to increase or decrease the gap */
+    padding: 45px; /* Optional: Add padding for better spacing inside the boxes */
+    border: 1px solid #e4e4e4; /* Optional: Add a border to distinguish the boxes */
+    border-radius: 5px;/* Hide content that overflows */
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; 
+    z-index: 10;
+}
+
+/* Styling the h1 title for all boxes */
+.services .intro-box h1, 
+.services .JS-box h1, 
+.services .SQL-box h1 {
+    font-size: 4em;
+    margin-bottom: 0px;
+    z-index: 4;
+    transform: translateY(-20px); /* Slides the title up */
+    opacity: 0.9;
+    pointer-events: none;
+    transition: transform 0.2s ease, opacity 0.1s ease-in-out;
+}
+.services .intro-box .hidden-content a,
+.services .JS-box .hidden-content a,
+.services .SQL-box .hidden-content a {
+    color: #EAEAEA; /* Change this to any color you prefer */
+    text-decoration: underline; /* Removes underline if desired */
+}
+
+
+/* Styling for the hidden conten */
+/*### style for hidden content!!!*/ 
+/*### style for service page!!!*/ 
+
+/* Ensure the anchor tags are not covered by other elements */
+a {
+    position: relative;
+    z-index: 10; /* Bring links above any overlapping elements */
+}
+
+/* Optional: Add a hover style to visualize the hover area */
+a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Ensure list items have proper padding and margin */
+ul.resources-list li {
+    position: relative;
+    padding: 9px 0;
+    margin: 0;
+}
+
+/* Fix potential issues with hidden content overlapping */
+.hidden-content {
+    position: relative;
+    z-index: 1;
+    pointer-events: none; /* Prevent hidden content from blocking links */
+}
+
+/* Hidden content styles */
+.services .intro-box .hidden-content,
+.services .JS-box .hidden-content,
+.services .SQL-box .hidden-content {
+    opacity: 0;
+    pointer-events: auto;
+    transition: opacity 0.3s ease-in-out;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 3;
+    font-size: 1.7em;
+    line-height: 1.2;
+}
+
+/* Reveal content on hover */
+.services .intro-box:hover .hidden-content,
+.services .JS-box:hover .hidden-content,
+.services .SQL-box:hover .hidden-content {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 1;
+}
+
+/* Fade out the title on hover */
+.services .intro-box:hover h1,
+.services .JS-box:hover h1,
+.services .SQL-box:hover h1 {
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Smooth transition for box hover */
+.services .intro-box:hover,
+.services .JS-box:hover,
+.services .SQL-box:hover {
+    transition: all 0.1s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Styling for the about container */
+/*### style for about page!!!*/ 
+/*### style for about page!!!*/ 
+
+.about .intro-box {
+    background-color: #edf1f0; /* Different background for the about page */
+}
+
+.about .intro-box h1 {
+    font-size: 1.5em; /* Size of the heading */
+    color: #333; /* Dark gray color */
+    text-align: left;
+}
+
+.about .intro-box p {
+    font-size: 1em; /* Size of the paragraphs */
+    line-height: 1.5; /* Spacing between lines */
+    text-align: left;
+    color: #555; /* Medium gray color */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px;
+    }
+    .navbar-brand a {
+        font-size: 24px; /* Reduced font size for smaller screens */
+    }
+
+    .about .intro-box h1 {
+        font-size: 1.8em; /* Adjust for smaller screens */
+    }
+    .about .intro-box p {
+        font-size: 0.9em; /* Smaller paragraph on small screens */
+        line-height: 1.5; /* Maintain adequate spacing */
+    }
+}
+
+/* Styling for the index start here  */
+/*### style for index start here !!!*/ 
+/*### style for index start here !!!*/ 
+
+
+.cta-button {
+    background-color: #FFE285; /* Button background color */
+    color: #000000; /* Text color */
+    padding: 12px 40px;
+    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto; /* Centers the container on the page */
+}
+
+.cta-button:hover {
+    background-color: #1E352F; /* Darker shade for hover effect */
+    color: #FFE285; /* Text color */
+}
+
